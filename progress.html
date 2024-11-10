@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celesta Kim Progress</title>
+    <link rel="stylesheet" href="cv.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            
+        }
+
+        video.background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        header {
+            width: 100%;
+            background: url('IMAGES/12 PLANE.png') no-repeat center center;
+            background-size: cover;
+            padding: 50px 0;
+            text-align: center;
+            color: white;
+        }
+
+        #skills {
+            padding: 50px 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8); /* Added background for better readability */
+        }
+
+        #skills h2 {
+            margin-bottom: 30px;
+        }
+
+        #skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #skills ul li {
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        #skills ul li button,
+        #skills ul li a {
+            width: 100%;
+            max-width: 300px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+    
+        @keyframes slide {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-10%); }
+        }
+
+        .gallery img {
+            width: 300px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 10px;
+            width: 100%; /* Ensure it stretches the entire width */
+            flex-wrap: wrap; /* Allow breaking on smaller screens */
+        }
+
+        .social-media div {
+            font-size: 1.2em;
+            text-align: center; /* Center the text */
+        }
+
+        @media (max-width: 600px) {
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+            .social-media div {
+                font-size: 1em; /* Decrease font size for mobile view */
+                flex-basis: 45%; /* Break into two lines on smaller screens */
+            }
+        }
+
+        #paragraph-container {
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay loop muted playsinline>
+        <source src="IMAGES/1000.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <h1>Celesta Kim Progress</h1>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <img src="IMAGES/3.jpg" alt="Illustration 1">
+            <img src="IMAGES/5.jpg" alt="Illustration 2">
+            <img src="IMAGES/1.jpg.jpg" alt="Illustration 3">
+            <img src="IMAGES/8.png" alt="Illustration 4">
+            <img src="IMAGES/9.png" alt="Illustration 5">
+            <img src="IMAGES/9.png" alt="Illustration 6">
+            <img src="IMAGES/9.png" alt="Illustration 7">
+        </section>
+
+        <section class="buttons">
+            <button onclick="showParagraph('achievements')">Achievements</button>
+            <button onclick="showParagraph('aspirations')">Aspirations</button>
+        </section>
+
+        <section id="paragraph-container">
+            <!-- Dynamic content will be loaded here -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <div id="fb-followers">Facebook: 0+</div>
+            <div id="yt-followers">YouTube: 0+</div>
+            <div id="x-followers">Twitter: 0+</div>
+            <div id="li-followers">LinkedIn: 0+</div>
+            <div id="ig-followers">Instagram: 0+</div>
+        </div>
+        <p>&copy; 2023 Celesta Kim</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
